@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_10_19_141558) do
     t.string "first_name"
     t.string "last_name"
     t.integer "donation"
+    t.boolean "donation_received"
     t.integer "student_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
