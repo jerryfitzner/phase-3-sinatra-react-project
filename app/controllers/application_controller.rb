@@ -35,7 +35,11 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/donors/:id" do
-    
+    donor = Donor.find(params[:id])
+    donor.update(
+      donation_received: params[:donation_received]
+    )
+    donor.to_json
   end
 
   delete "/donors/:id" do
