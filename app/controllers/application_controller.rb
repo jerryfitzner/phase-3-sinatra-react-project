@@ -1,3 +1,5 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -30,6 +32,10 @@ class ApplicationController < Sinatra::Base
       student_id: params[:student_id]
     )
     donor.to_json
+  end
+
+  patch "/donors/:id" do
+    
   end
 
   delete "/donors/:id" do
